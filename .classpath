@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="target/generated-sources/antlr4"/>
+	<classpathentry excluding="characters/" kind="src" path="src/main"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="D:/Documents/workspace/CK2_Character_Creators/antlr-4.4-complete.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

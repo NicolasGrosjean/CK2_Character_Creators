@@ -1,0 +1,16 @@
+200001={
+name = "Bernard"
+dynasty = 400100
+dna = "pdhbnfkpcih"
+culture = arpitan
+religion = catholic
+martial = 4
+diplomacy = 7
+stewardship = 7
+intrigue = 3
+learning = 4
+add_trait = "flamboyant_schemer"
+add_trait = "greedy"
+1270.10.20={birth=yes}
+1336.10.20={death=yes}
+}
