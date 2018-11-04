@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.antlr.v4.runtime.misc.NotNull;
+import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 public class CK2CharacterModListener extends CK2CharacterBaseListener {
@@ -44,5 +45,9 @@ public class CK2CharacterModListener extends CK2CharacterBaseListener {
 		String date = ctx.getChild(0).toString();
 		String attribute = ctx.getChild(3).toString();
 		currentCharacter.addAttribute(attribute, date);
+	}
+	
+	@Override public void visitErrorNode(@NotNull ErrorNode node) {
+		System.err.println(node.toString());
 	}
 }

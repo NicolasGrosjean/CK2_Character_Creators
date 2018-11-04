@@ -16,6 +16,18 @@ public class CK2CharacterBaseListener implements CK2CharacterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCharacters(@NotNull CK2CharacterParser.CharactersContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCharacters(@NotNull CK2CharacterParser.CharactersContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterDate_attribute(@NotNull CK2CharacterParser.Date_attributeContext ctx) { }
 	/**
 	 * {@inheritDoc}

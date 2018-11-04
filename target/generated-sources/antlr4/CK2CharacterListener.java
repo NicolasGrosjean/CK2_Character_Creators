@@ -8,6 +8,16 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CK2CharacterListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link CK2CharacterParser#characters}.
+	 * @param ctx the parse tree
+	 */
+	void enterCharacters(@NotNull CK2CharacterParser.CharactersContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CK2CharacterParser#characters}.
+	 * @param ctx the parse tree
+	 */
+	void exitCharacters(@NotNull CK2CharacterParser.CharactersContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CK2CharacterParser#date_attribute}.
 	 * @param ctx the parse tree
 	 */

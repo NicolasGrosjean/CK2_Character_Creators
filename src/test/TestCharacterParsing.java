@@ -15,7 +15,7 @@ public class TestCharacterParsing {
 		CK2CharacterLexer lexer = new CK2CharacterLexer(new ANTLRFileStream("tests/one_character.txt"));
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 		CK2CharacterParser parser = new CK2CharacterParser(tokens);
-		ParseTree tree = parser.character();			
+		ParseTree tree = parser.characters();			
 		ParseTreeWalker walker = new ParseTreeWalker();
 		CK2CharacterModListener listener = new CK2CharacterModListener();
 	    walker.walk(listener, tree);
@@ -43,4 +43,16 @@ public class TestCharacterParsing {
 	    Assert.assertEquals(null, character.getMother());
 	}
 
+	@Test
+	public void testParseSeveralCharaters() throws IOException {
+		CK2CharacterLexer lexer = new CK2CharacterLexer(new ANTLRFileStream("tests/LCDA_geneve_cite.txt"));
+		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		CK2CharacterParser parser = new CK2CharacterParser(tokens);
+		ParseTree tree = parser.characters();			
+		ParseTreeWalker walker = new ParseTreeWalker();
+		CK2CharacterModListener listener = new CK2CharacterModListener();
+	    walker.walk(listener, tree);
+	    List<Character> characters = listener.getCharacters();
+	    Assert.assertEquals(5, characters.size());
+	}
 }
