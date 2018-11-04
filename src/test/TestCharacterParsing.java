@@ -15,7 +15,7 @@ public class TestCharacterParsing {
 		CK2CharacterLexer lexer = new CK2CharacterLexer(new ANTLRFileStream("tests/one_character.txt"));
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 		CK2CharacterParser parser = new CK2CharacterParser(tokens);
-		ParseTree tree = parser.r();			
+		ParseTree tree = parser.character();			
 		ParseTreeWalker walker = new ParseTreeWalker();
 		CK2CharacterModListener listener = new CK2CharacterModListener();
 	    walker.walk(listener, tree);
@@ -32,11 +32,11 @@ public class TestCharacterParsing {
 	    Assert.assertEquals("7", character.getAttribute("stewardship"));
 	    Assert.assertEquals("3", character.getAttribute("intrigue"));
 	    Assert.assertEquals("4", character.getAttribute("learning"));
-	    Assert.assertEquals("1270.10.20", character.getAttribute("birthDate"));
-	    Assert.assertEquals("1336.10.20", character.getAttribute("deathDate"));
+	    Assert.assertEquals("1270.10.20", character.getAttribute("birth"));
+	    Assert.assertEquals("1336.10.20", character.getAttribute("death"));
 	    Assert.assertEquals(2, character.getTraits().size());
-	    Assert.assertEquals("Bernard", character.getTraits().get(0));
-	    Assert.assertEquals("Bernard", character.getTraits().get(1));
+	    Assert.assertEquals("flamboyant_schemer", character.getTraits().get(0));
+	    Assert.assertEquals("greedy", character.getTraits().get(1));
 	    Assert.assertEquals(0, character.getChildren().size());
 	    Assert.assertEquals(0, character.getSpouses().size());
 	    Assert.assertEquals(null, character.getFather());

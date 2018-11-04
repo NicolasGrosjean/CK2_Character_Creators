@@ -16,13 +16,49 @@ public class CK2CharacterBaseListener implements CK2CharacterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterR(@NotNull CK2CharacterParser.RContext ctx) { }
+	@Override public void enterDate_attribute(@NotNull CK2CharacterParser.Date_attributeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitR(@NotNull CK2CharacterParser.RContext ctx) { }
+	@Override public void exitDate_attribute(@NotNull CK2CharacterParser.Date_attributeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCharacter(@NotNull CK2CharacterParser.CharacterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCharacter(@NotNull CK2CharacterParser.CharacterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAttribute(@NotNull CK2CharacterParser.AttributeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAttribute(@NotNull CK2CharacterParser.AttributeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterValue(@NotNull CK2CharacterParser.ValueContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitValue(@NotNull CK2CharacterParser.ValueContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

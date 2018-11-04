@@ -22,8 +22,8 @@ public class Character {
 	private int intrigue;
 	private int learning;
 	private List<String> traits;
-	private String birthDate;
-	private String deathDate;
+	private String birth;
+	private String death;
 
 	public Character(int id) {
 		this.id = id;
@@ -84,10 +84,10 @@ public class Character {
 			return String.valueOf(intrigue);
 		case "learning":
 			return String.valueOf(learning);
-		case "birthDate":
-			return birthDate;
-		case "deathDate":
-			return deathDate;
+		case "birth":
+			return birth;
+		case "death":
+			return death;
 		default:
 			System.err.println("Unknown attribute " + attribute);
 			return "";
@@ -98,30 +98,43 @@ public class Character {
 		switch (attribute) {
 		case "name":
 			name = value;
+			break;
 		case "dynasty":
 			dynasty = Integer.valueOf(value);
+			break;
 		case "dna":
 			dna = value;
+			break;
 		case "culture":
 			culture = value;
+			break;
 		case "religion":
 			religion = value;
+			break;
 		case "martial":
 			martial = Integer.valueOf(value);
+			break;
 		case "diplomacy":
 			diplomacy = Integer.valueOf(value);
+			break;
 		case "stewardship":
 			stewardship = Integer.valueOf(value);
+			break;
 		case "intrigue":
 			intrigue = Integer.valueOf(value);
+			break;
 		case "learning":
 			learning = Integer.valueOf(value);
-		case "trait":
+			break;
+		case "add_trait":
 			traits.add(value);
-		case "birthDate":
-			birthDate = value;
-		case "deathDate":
-			deathDate = value;
+			break;
+		case "birth":
+			birth = value;
+			break;
+		case "death":
+			death = value;
+			break;
 		default:
 			System.err.println("Unknown attribute " + attribute);
 		}

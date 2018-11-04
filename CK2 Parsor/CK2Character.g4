@@ -1,10 +1,16 @@
 /**
- * Define a grammar called Hello
+ * Define a grammar for CK2 characters
  */
 grammar CK2Character;
-r  : 'hello' ID ;         // match keyword hello followed by an identifier
+character : NUMBER '=' '{' (attribute | date_attribute)+ '}';
 
-ID : [a-z]+ ;             // match lower-case identifiers
+attribute : STRING '=' value;
+date_attribute : DATE '=' '{' STRING '=' STRING '}';
+value : NUMBER | STRING | ('\"' STRING '\"');
 
-WS : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
+STRING : [A-Za-z_]+ ;
+NUMBER : [0-9]+;
+DATE : NUMBER '.' NUMBER '.' NUMBER;
 
+WS : [ \t\r\n]+ -> skip ;
+COMMENT : '#' (STRING|NUMBER)+ -> skip;
